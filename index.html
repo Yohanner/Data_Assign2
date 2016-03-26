@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coursera</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Coursera">
+  <meta name="author" content="Yohannes R.">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Coursera</h1>
+    <h2>How are you doing in data science courses?</h2>
+    <p>Yohannes R.<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>This page shows you how my app works</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>It asks for five of your previous data science specialization courses score</li>
+<li>It calculates the mean of those inputs</li>
+<li>It tells you what your average score is</li>
+<li>It tells you what your expected score is for &quot;Developing data products course&quot;</li>
+<li>It puts a comment depending on your average score</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="codefont" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>How the App. works</h2>
+  </hgroup>
+  <article data-timings="">
+    <h5>Suppose you input the following as your scores:</h5>
+
+<p>80,70,90,100,100</p>
+
+<h5>First, it reads the numbers as vectors as follows:</h5>
+
+<pre><code class="r">x=c(80,70,90,100,100)
+</code></pre>
+
+<h5>Then, it calculates your average score as</h5>
+
+<pre><code class="r"> Avg_score=mean(rbind(x), na.rm=TRUE)
+</code></pre>
+
+<h5>It then ouputs your score as</h5>
+
+<p>Your averge score is:</p>
+
+<pre><code> ## [1] 88
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Continued ...</h2>
+  </hgroup>
+  <article data-timings="">
+    <h5>It also gives an expected score:</h5>
+
+<p>I would expect your &quot;Developing data products course score to be:&quot;</p>
+
+<pre><code> ## [1] 88
+</code></pre>
+
+<h5>Finally, a comment based on your average score :)</h5>
+
+<pre><code> ## [1] &quot;Very good&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Appendix</h2>
+  </hgroup>
+  <article data-timings="">
+    <h5>The complete R-code is</h5>
+
+<ul>
+<li><p>x=c(80,70,90,100,100)</p></li>
+<li><p>Avg_score=mean(rbind(x), na.rm=TRUE)</p></li>
+<li><p>Avg_score</p></li>
+<li><p>ifelse(Avg_score&lt;50, &quot;Not a good score, try harder&quot;, ifelse (Avg_score&lt;70,&quot;Not bad, but you can still improve&quot;,ifelse(Avg_score&lt;80,&quot;Good&quot;,ifelse(Avg_score&lt;90,&quot;Very good&quot;,&quot;Excellent&quot;))))</p></li>
+</ul>
+
+<p>Try my App and have fun!</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='This page shows you how my app works'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='How the App. works'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Continued ...'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Appendix'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
